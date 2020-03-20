@@ -1,12 +1,12 @@
-import React from "react";
-import "./AppStyles/App.css";
-import { Navbar, Tarjetas } from "./Components";
+import React from 'react';
+import './AppStyles/App.css';
+import { Navbar, Tarjetas } from './Components';
 
 function App() {
 	return (
 		<>
 			<Navbar />
-			<div className='app-container'>
+			<div className="app-container">
 				<div>
 					<Tarjetas />
 				</div>
@@ -17,7 +17,7 @@ function App() {
 					<Tarjetas />
 				</div>
 			</div>
-			<div className='app-container'>
+			<div className="app-container">
 				<div>
 					<Tarjetas />
 				</div>
