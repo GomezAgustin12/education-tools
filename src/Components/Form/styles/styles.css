@@ -8,4 +8,13 @@
           flex-direction: column;
   width: 100%;
 }
+
+.form-button {
+  width: 10rem;
+  height: 4rem;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: #5fb2ff;
+  margin: 2rem;
+}
 /*# sourceMappingURL=styles.css.map */

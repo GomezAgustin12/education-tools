@@ -46,6 +46,11 @@ const Form = () => {
 				onSubmit={onSubmit}
 			/>
 			<FormImgInput handleImageUpload={handleImageUpload} />
+			<button
+				className='form-button'
+				onClick={event => onSubmit(event.target)}>
+				Cargar
+			</button>
 		</div>
 	);
 };
