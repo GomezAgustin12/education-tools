@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './styles/styles.css';
+import React, { useState } from "react";
+import "./styles/styles.css";
 
 const FormImgInput = ({ handleImageUpload }) => {
 	const [showImg, setShowImg] = useState(false);
@@ -10,7 +10,7 @@ const FormImgInput = ({ handleImageUpload }) => {
 		const reader = new FileReader();
 
 		if (file) {
-			reader.addEventListener('load', () => {
+			reader.addEventListener("load", () => {
 				setImge(reader.result);
 				setShowImg(true);
 				handleImageUpload({
@@ -25,13 +25,15 @@ const FormImgInput = ({ handleImageUpload }) => {
 		}
 	};
 	return (
-		<div className="form-img-container" showImg>
-			<div className="preview-container">
-				<img src={imge ? imge : ''} alt="Preview Image" />
-				<div style={{ display: `${showImg ? 'none' : 'block'}` }}>preview</div>
+		<div className='form-img-container' showImg>
+			<div className='preview-container'>
+				<img src={imge ? imge : ""} alt='Preview Image' />
+				<div style={{ display: `${showImg ? "none" : "block"}` }}>
+					preview
+				</div>
 			</div>
 
-			<input type="file" name="inputFile" onChange={getImg} />
+			<input type='file' name='inputFile' onChange={getImg} />
 		</div>
 	);
 };

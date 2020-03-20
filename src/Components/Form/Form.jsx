@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import FormInputs from "./FormInputs/FormInputs";
 import FormImgInput from "./FormImg/FormImg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./styles/styles.css";
 import axios from "axios";
+
 const url = "https://educacion-remota.herokuapp.com/";
 
 const Form = () => {
+	const notify = () => toast.success("Cargado!");
 	const [formObject, setFormObject] = useState({});
 
 	const onFormInputChange = (atribute, value) =>
@@ -18,18 +22,21 @@ const Form = () => {
 		setFormObject({ ...formObject, image });
 		console.log(formObject);
 	};
-	const onSubmit = target => {
-		axios.post(`${url}cards`, {
+
+	const onSubmit = async () => {
+		await axios.post(`${url}cards`, {
 			title: formObject.title,
 			subtitle: formObject.subtitle,
 			description: formObject.description,
 			link: formObject.link,
 			image: formObject.image.base64string
 		});
+		notify();
 	};
 
 	return (
 		<div className='form'>
+			<ToastContainer autoClose='1000' hideProgressBar={true} />;
 			<FormInputs
 				title={formObject.title}
 				subtitle={formObject.subtitle}
