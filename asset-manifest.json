@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/education-tools-front/static/css/main.f184264e.chunk.css",
-    "main.js": "/education-tools-front/static/js/main.ed558259.chunk.js",
-    "main.js.map": "/education-tools-front/static/js/main.ed558259.chunk.js.map",
-    "runtime-main.js": "/education-tools-front/static/js/runtime-main.b20634ac.js",
-    "runtime-main.js.map": "/education-tools-front/static/js/runtime-main.b20634ac.js.map",
-    "static/js/2.0b262806.chunk.js": "/education-tools-front/static/js/2.0b262806.chunk.js",
-    "static/js/2.0b262806.chunk.js.map": "/education-tools-front/static/js/2.0b262806.chunk.js.map",
-    "index.html": "/education-tools-front/index.html",
-    "precache-manifest.da59ac7a334df9b5a454c1e325844ee2.js": "/education-tools-front/precache-manifest.da59ac7a334df9b5a454c1e325844ee2.js",
-    "service-worker.js": "/education-tools-front/service-worker.js",
-    "static/css/main.f184264e.chunk.css.map": "/education-tools-front/static/css/main.f184264e.chunk.css.map",
-    "static/js/2.0b262806.chunk.js.LICENSE.txt": "/education-tools-front/static/js/2.0b262806.chunk.js.LICENSE.txt",
-    "static/media/react.png": "/education-tools-front/static/media/react.b552b736.png"
+    "main.css": "/static/css/main.f184264e.chunk.css",
+    "main.js": "/static/js/main.b80a1f83.chunk.js",
+    "main.js.map": "/static/js/main.b80a1f83.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e836eb01.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e836eb01.js.map",
+    "static/js/2.0b262806.chunk.js": "/static/js/2.0b262806.chunk.js",
+    "static/js/2.0b262806.chunk.js.map": "/static/js/2.0b262806.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2080b9528bf41606df3b11758fa5c1b3.js": "/precache-manifest.2080b9528bf41606df3b11758fa5c1b3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.f184264e.chunk.css.map": "/static/css/main.f184264e.chunk.css.map",
+    "static/js/2.0b262806.chunk.js.LICENSE.txt": "/static/js/2.0b262806.chunk.js.LICENSE.txt",
+    "static/media/react.png": "/static/media/react.b552b736.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b20634ac.js",
+    "static/js/runtime-main.e836eb01.js",
     "static/js/2.0b262806.chunk.js",
     "static/css/main.f184264e.chunk.css",
-    "static/js/main.ed558259.chunk.js"
+    "static/js/main.b80a1f83.chunk.js"
   ]
 }
