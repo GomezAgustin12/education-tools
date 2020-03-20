@@ -1,33 +1,16 @@
-import React from 'react';
-import './AppStyles/App.css';
-import { Navbar, Tarjetas } from './Components';
+import React from "react";
+import "./AppStyles/App.css";
+import { Navbar, Home, Form } from "./Components";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
 	return (
 		<>
 			<Navbar />
-			<div className="app-container">
-				<div>
-					<Tarjetas />
-				</div>
-				<div>
-					<Tarjetas />
-				</div>
-				<div>
-					<Tarjetas />
-				</div>
-			</div>
-			<div className="app-container">
-				<div>
-					<Tarjetas />
-				</div>
-				<div>
-					<Tarjetas />
-				</div>
-				<div>
-					<Tarjetas />
-				</div>
-			</div>
+			<Router>
+				<Route path='/' exact component={Home} />
+				<Route path='/form' exact component={Form} />
+			</Router>
 		</>
 	);
 }

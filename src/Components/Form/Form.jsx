@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import FormInputs from './FormInputs/FormInputs';
-import FormImgInput from './FormImg/FormImg';
-import './styles/styles.css';
+import React, { useState } from "react";
+import FormInputs from "./FormInputs/FormInputs";
+import FormImgInput from "./FormImg/FormImg";
+import "./styles/styles.css";
+import axios from "axios";
+const url = "http://localhost:4000";
 
 const Form = () => {
 	const [formObject, setFormObject] = useState({});
@@ -14,15 +16,27 @@ const Form = () => {
 
 	const handleImageUpload = image => {
 		setFormObject({ ...formObject, image });
+		console.log(formObject);
+	};
+	const onSubmit = target => {
+		axios.post(`${url}/cards`, {
+			title: formObject.title,
+			subtitle: formObject.subtitle,
+			description: formObject.description,
+			link: formObject.link,
+			image: formObject.image.base64string
+		});
 	};
 
 	return (
-		<div className="form">
+		<div className='form'>
 			<FormInputs
 				title={formObject.title}
 				subtitle={formObject.subtitle}
 				description={formObject.description}
+				link={formObject.link}
 				onChange={onFormInputChange}
+				onSubmit={onSubmit}
 			/>
 			<FormImgInput handleImageUpload={handleImageUpload} />
 		</div>
