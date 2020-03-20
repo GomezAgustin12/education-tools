@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/education-tools-front/static/css/main.1d7389fe.chunk.css",
+    "main.js": "/education-tools-front/static/js/main.3190baad.chunk.js",
+    "main.js.map": "/education-tools-front/static/js/main.3190baad.chunk.js.map",
+    "runtime-main.js": "/education-tools-front/static/js/runtime-main.b20634ac.js",
+    "runtime-main.js.map": "/education-tools-front/static/js/runtime-main.b20634ac.js.map",
+    "static/js/2.7c637bf5.chunk.js": "/education-tools-front/static/js/2.7c637bf5.chunk.js",
+    "static/js/2.7c637bf5.chunk.js.map": "/education-tools-front/static/js/2.7c637bf5.chunk.js.map",
+    "index.html": "/education-tools-front/index.html",
+    "precache-manifest.d49fca1b8b1e50f681854f88ef971a6f.js": "/education-tools-front/precache-manifest.d49fca1b8b1e50f681854f88ef971a6f.js",
+    "service-worker.js": "/education-tools-front/service-worker.js",
+    "static/css/main.1d7389fe.chunk.css.map": "/education-tools-front/static/css/main.1d7389fe.chunk.css.map",
+    "static/js/2.7c637bf5.chunk.js.LICENSE.txt": "/education-tools-front/static/js/2.7c637bf5.chunk.js.LICENSE.txt",
+    "static/media/react.png": "/education-tools-front/static/media/react.b552b736.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b20634ac.js",
+    "static/js/2.7c637bf5.chunk.js",
+    "static/css/main.1d7389fe.chunk.css",
+    "static/js/main.3190baad.chunk.js"
+  ]
+}
