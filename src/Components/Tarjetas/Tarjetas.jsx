@@ -5,7 +5,7 @@ import imagen from "./react.png";
 import "./styles/styles.css";
 import axios from "axios";
 
-const url = "http://localhost:4000";
+const url = "https://educacion-remota.herokuapp.com/";
 
 function Tarjetas() {
 	const [cards, setCards] = useState([{}]);

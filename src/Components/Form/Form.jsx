@@ -3,7 +3,7 @@ import FormInputs from "./FormInputs/FormInputs";
 import FormImgInput from "./FormImg/FormImg";
 import "./styles/styles.css";
 import axios from "axios";
-const url = "http://localhost:4000";
+const url = "https://educacion-remota.herokuapp.com/";
 
 const Form = () => {
 	const [formObject, setFormObject] = useState({});
