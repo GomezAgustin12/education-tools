@@ -36,7 +36,9 @@ const FormInputs = ({
 			placeholder='Link'
 			onChange={event => onChange("link", event.target.value)}
 		/>
-		<button onClick={event => onSubmit(event.target)}>Cargar</button>
+		<a href='/form'>
+			<button onClick={event => onSubmit(event.target)}>Cargar</button>
+		</a>
 	</div>
 );
 
