@@ -19,7 +19,7 @@ const Form = () => {
 		console.log(formObject);
 	};
 	const onSubmit = target => {
-		axios.post(`${url}/cards`, {
+		axios.post(`${url}cards`, {
 			title: formObject.title,
 			subtitle: formObject.subtitle,
 			description: formObject.description,
