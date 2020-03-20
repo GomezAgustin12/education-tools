@@ -7,7 +7,7 @@ function Navbar() {
 			<a className='active' href='#home'>
 				Home
 			</a>
-			<a href='#documentacion'>Documentacion</a>
+			<a href='form'>Form</a>
 			<a href='#contact'>Contacto</a>
 		</div>
 	);
