@@ -1,23 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 import imagen from "./react.png";
 import "./styles/styles.css";
-import axios from "axios";
 
-const url = "https://educacion-remota.herokuapp.com/";
-
-function Tarjetas() {
-	const [cards, setCards] = useState([{}]);
-
-	useEffect(() => {
-		axios.get(`${url}/cards`).then(res => {
-			setCards(res.data.data);
-			console.log(cards);
-			console.log(res.data.data);
-		});
-	}, []);
-
+function Tarjetas(props) {
 	const header = <img src={imagen} alt='Card' height='100' width='100' />;
 	const footer = (
 		<span>
@@ -29,7 +16,7 @@ function Tarjetas() {
 	);
 	return (
 		<Card
-			title='Advanced Card'
+			title='Title'
 			subTitle='Subtitle'
 			style={{ width: "360px" }}
 			className='card'
