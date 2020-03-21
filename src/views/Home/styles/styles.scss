@@ -1,0 +1,10 @@
+.home-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: row wrap;
+
+	@media (max-width: 640px) {
+		justify-content: center;
+	}
+}
