@@ -21,8 +21,6 @@
 .contenido {
 	border: 2px;
 	margin: 1rem;
-	display: flex;
-	flex-direction: column;
 	text-align: justify;
 	font-size: large;
 }
@@ -33,4 +31,8 @@
 	border-radius: 1rem;
 	margin: 1rem;
 	border-style: none;
+}
+
+.card {
+	max-width: 360px;
 }
