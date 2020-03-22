@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Tarjetas from "../Tarjetas/Tarjetas";
+import Tarjetas from "../Components/Tarjetas/Tarjetas";
 import axios from "axios";
-import "./style.css";
+import { Container, Row, Col } from "react-bootstrap";
 
-const url = "https://educacion-remota.herokuapp.com/";
+const url = "http://api.education-tools.404webs.com/";
 
-function OrdenTarjetas() {
+function Home() {
 	const [cards, setCards] = useState([{}]);
 
 	useEffect(() => {
@@ -35,9 +35,11 @@ function OrdenTarjetas() {
 
 	return (
 		<>
-			<div className='app-container'>{renderTarjetas()}</div>
+			<Container>
+				<Row md={3}>{renderTarjetas()}</Row>
+			</Container>
 		</>
 	);
 }
 
-export default OrdenTarjetas;
+export default Home;
