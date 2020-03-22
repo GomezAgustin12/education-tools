@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Tarjetas from "../Components/Tarjetas/Tarjetas";
 import axios from "axios";
-import { Container, Row, Col } from "react-bootstrap";
+import GridList from "@material-ui/core/GridList";
 
-const url = "http://api.education-tools.404webs.com/";
+const url = "https://educacion-remota.herokuapp.com/";
 
 function Home() {
 	const [cards, setCards] = useState([{}]);
@@ -35,9 +35,7 @@ function Home() {
 
 	return (
 		<>
-			<Container>
-				<Row md={3}>{renderTarjetas()}</Row>
-			</Container>
+			<GridList spacing={1}>{renderTarjetas()}</GridList>
 		</>
 	);
 }

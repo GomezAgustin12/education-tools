@@ -8,7 +8,6 @@ function Navbar() {
 				Home
 			</a>
 			<a href='form'>Form</a>
-			<a href='#contact'>Contacto</a>
 		</div>
 	);
 }
