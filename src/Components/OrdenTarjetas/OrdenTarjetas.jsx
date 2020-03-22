@@ -3,8 +3,7 @@ import Tarjetas from "../Tarjetas/Tarjetas";
 import axios from "axios";
 import "./style.css";
 
-// const url = "https://educacion-remota.herokuapp.com/";
-const url = "http://localhost:4000/";
+const url = "https://educacion-remota.herokuapp.com/";
 
 function OrdenTarjetas() {
 	const [cards, setCards] = useState([{}]);
