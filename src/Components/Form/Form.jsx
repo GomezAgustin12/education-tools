@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./styles/styles.css";
 import axios from "axios";
 
-const url = "https://educacion-remota.herokuapp.com/";
+const url = "http://api.education-tools.404webs.com/";
 
 const Form = () => {
 	const notify = () => toast.success("Cargado!");
