@@ -3,80 +3,40 @@ import Tarjetas from "../Tarjetas/Tarjetas";
 import axios from "axios";
 import "./style.css";
 
-const url = "https://educacion-remota.herokuapp.com/";
+// const url = "https://educacion-remota.herokuapp.com/";
+const url = "http://localhost:4000/";
 
 function OrdenTarjetas() {
-	const [cards, setCards] = useState();
+	const [cards, setCards] = useState([{}]);
 
 	useEffect(() => {
 		const aux = async function() {
 			const data = await axios.get(`${url}cards`);
-			setCards(data.data);
+			await setCards(data.data);
 		};
 		aux();
 	}, []);
-	let title = "";
-	let subtitle = "";
-	let description = "";
-	let link = "";
-	let image = "";
 
-	for (const i in cards) {
-		title = cards[i].title;
-		subtitle = cards[i].subtitle;
-		description = cards[i].description;
-		link = cards[i].link;
-		image = cards[i].image;
-	}
+	const renderTarjetas = () => {
+		const a = cards.map(card => {
+			return (
+				<>
+					<Tarjetas
+						image={card.image}
+						title={card.title}
+						subtitle={card.subtitle}
+						description={card.description}
+						link={card.link}
+					/>
+				</>
+			);
+		});
+		return a;
+	};
 
 	return (
 		<>
-			<div className='app-container'>
-				<Tarjetas
-					title={title}
-					subtitle={subtitle}
-					description={description}
-					link={link}
-					image={image}
-				/>
-				<Tarjetas
-					title={title}
-					subtitle={subtitle}
-					description={description}
-					link={link}
-					image={image}
-				/>
-				<Tarjetas
-					title={title}
-					subtitle={subtitle}
-					description={description}
-					link={link}
-					image={image}
-				/>
-			</div>
-			<div className='app-container'>
-				<Tarjetas
-					title={title}
-					subtitle={subtitle}
-					description={description}
-					link={link}
-					image={image}
-				/>
-				<Tarjetas
-					title={title}
-					subtitle={subtitle}
-					description={description}
-					link={link}
-					image={image}
-				/>
-				<Tarjetas
-					title={title}
-					subtitle={subtitle}
-					description={description}
-					link={link}
-					image={image}
-				/>
-			</div>
+			<div className='app-container'>{renderTarjetas()}</div>
 		</>
 	);
 }
