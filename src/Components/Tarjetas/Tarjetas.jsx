@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 import "./styles/styles.css";
-const url = "http://localhost:4000/";
+import { url } from "./../../const";
 
 function Tarjetas({ image, title, subtitle, description, link }) {
 	const header = (

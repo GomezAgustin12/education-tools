@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import Tarjetas from "../Components/Tarjetas/Tarjetas";
 import axios from "axios";
 import GridList from "@material-ui/core/GridList";
-
-// const url = "https://apieducation-tools.404webs.com/";
-const url = "http://localhost:4000/";
+import { url } from "./../const";
 
 function Home() {
 	const [cards, setCards] = useState([{}]);

@@ -4,9 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/styles.css";
 import axios from "axios";
-
-// const url = "https://educacion-remota.herokuapp.com/";
-const url = "http://localhost:4000/";
+import { url } from "./../../const";
 
 const Form = () => {
 	const notify = () => toast.success("Cargado!");
