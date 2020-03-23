@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import FormInputs from "./FormInputs/FormInputs";
-import FormImgInput from "./FormImg/FormImg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/styles.css";
@@ -29,10 +28,10 @@ const Form = () => {
 
 		const fd = new FormData();
 		fd.append("image", formObject.image);
-		fd.set("data", JSON.stringify(formObject));
 		fd.append("title", formObject.title);
 		fd.append("subtitle", formObject.subtitle);
 		fd.append("description", formObject.description);
+		fd.append("orientacion", formObject.orientacion);
 		fd.append("link", formObject.link);
 		const res = await axios.post(`${url}cards`, fd);
 		console.log(res);
@@ -52,7 +51,6 @@ const Form = () => {
 				onSubmit={onSubmit}
 				handleImageUpload={handleImageUpload}
 			/>
-			{/* <FormImgInput handleImageUpload={handleImageUpload} /> */}
 		</div>
 	);
 };

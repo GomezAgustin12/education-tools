@@ -16,14 +16,14 @@ const FormInputs = ({
 			className='form-container'
 			onSubmit={onSubmit}
 			encType='multipart/form-data'>
-			<label>Title:</label>
+			<label>Titulo:</label>
 			<input
 				type='text'
 				value={title}
 				placeholder='Title'
 				onChange={event => onChange("title", event.target.value)}
 			/>
-			<label>Sub Title:</label>
+			<label>Categoria:</label>
 			<input
 				type='text'
 				value={subtitle}
@@ -42,6 +42,34 @@ const FormInputs = ({
 				placeholder='Link'
 				onChange={event => onChange("link", event.target.value)}
 			/>
+			<label>
+				¿A que area consideras que esta herramienta se orienta mas?
+			</label>
+			<label>
+				<input
+					type='radio'
+					placeholder='Trabajo Remoto'
+					id='trabajoRemoto'
+					name='orientacion'
+					value='Trabajo Remoto'
+					onChange={event =>
+						onChange("orientacion", event.target.value)
+					}
+				/>
+				Trabajo Remoto
+			</label>
+			<label>
+				<input
+					type='radio'
+					placeholder='Contenido Digitaltacion'
+					name='orientacion'
+					value='Generar Contenido Digital'
+					onChange={event =>
+						onChange("orinetacion", event.target.value)
+					}
+				/>
+				Generar Contenido Digital
+			</label>
 			<label>Imagen:</label>
 			<input
 				type='file'
@@ -57,4 +85,5 @@ const FormInputs = ({
 		</form>
 	);
 };
+
 export default FormInputs;
