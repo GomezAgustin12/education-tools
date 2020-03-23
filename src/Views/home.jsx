@@ -3,7 +3,8 @@ import Tarjetas from "../Components/Tarjetas/Tarjetas";
 import axios from "axios";
 import GridList from "@material-ui/core/GridList";
 
-const url = "https://educacion-remota.herokuapp.com/";
+// const url = "https://apieducation-tools.404webs.com/";
+const url = "http://localhost:4000/";
 
 function Home() {
 	const [cards, setCards] = useState([{}]);

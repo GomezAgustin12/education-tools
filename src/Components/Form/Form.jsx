@@ -6,7 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 import "./styles/styles.css";
 import axios from "axios";
 
-const url = "https://educacion-remota.herokuapp.com/";
+// const url = "https://educacion-remota.herokuapp.com/";
+const url = "http://localhost:4000/";
 
 const Form = () => {
 	const notify = () => toast.success("Cargado!");
@@ -18,19 +19,25 @@ const Form = () => {
 			[atribute]: value
 		});
 
-	const handleImageUpload = image => {
-		setFormObject({ ...formObject, image });
-		console.log(formObject);
+	const handleImageUpload = event => {
+		setFormObject({ ...formObject, image: event.target.files[0] });
+		console.log(event.target.files[0]);
 	};
 
 	const onSubmit = async () => {
-		await axios.post(`${url}cards`, {
+		console.log(formObject.image);
+
+		const fd = new FormData();
+		fd.append("image", formObject.image, formObject.image.name);
+		const res = await axios.post(`${url}cards`, {
 			title: formObject.title,
 			subtitle: formObject.subtitle,
 			description: formObject.description,
 			link: formObject.link,
-			image: formObject.image.base64string
+			image: fd
 		});
+		console.log(res);
+
 		notify();
 	};
 
@@ -44,13 +51,9 @@ const Form = () => {
 				link={formObject.link}
 				onChange={onFormInputChange}
 				onSubmit={onSubmit}
+				handleImageUpload={handleImageUpload}
 			/>
-			<FormImgInput handleImageUpload={handleImageUpload} />
-			<button
-				className='form-button'
-				onClick={event => onSubmit(event.target)}>
-				Cargar
-			</button>
+			{/* <FormImgInput handleImageUpload={handleImageUpload} /> */}
 		</div>
 	);
 };

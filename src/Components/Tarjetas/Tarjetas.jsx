@@ -14,24 +14,9 @@ function Tarjetas({ image, title, subtitle, description, link }) {
 		</span>
 	);
 	return (
-		// <Card style={{ width: "18rem" }}>
-		// 	<Card.Img
-		// 		style={{ justifyContent: "center" }}
-		// 		src={image}
-		// 		width={150}
-		// 		height={150}
-		// 	/>
-		// 	<Card.Body>
-		// 		<Card.Title>{title}</Card.Title>
-		// 		<Card.Text>{description}</Card.Text>
-		// 		<Button href={link} target='_blank' variant='primary'>
-		// 			Site
-		// 		</Button>
-		// 	</Card.Body>
-		// </Card>
 		<Card
-			title={title}
-			subTitle={subtitle}
+			title={<h2>{title}</h2>}
+			subTitle={<h3>{subtitle}</h3>}
 			className='card'
 			footer={footer}
 			header={header}>
