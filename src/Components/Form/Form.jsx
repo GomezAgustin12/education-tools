@@ -28,14 +28,13 @@ const Form = () => {
 		console.log(formObject.image);
 
 		const fd = new FormData();
-		fd.append("image", formObject.image, formObject.image.name);
-		const res = await axios.post(`${url}cards`, {
-			title: formObject.title,
-			subtitle: formObject.subtitle,
-			description: formObject.description,
-			link: formObject.link,
-			image: fd
-		});
+		fd.append("image", formObject.image);
+		fd.set("data", JSON.stringify(formObject));
+		fd.append("title", formObject.title);
+		fd.append("subtitle", formObject.subtitle);
+		fd.append("description", formObject.description);
+		fd.append("link", formObject.link);
+		const res = await axios.post(`${url}cards`, fd);
 		console.log(res);
 
 		notify();
@@ -43,7 +42,7 @@ const Form = () => {
 
 	return (
 		<div className='form'>
-			<ToastContainer autoClose='1000' hideProgressBar={true} />;
+			<ToastContainer autoClose='1000' hideProgressBar={true} />
 			<FormInputs
 				title={formObject.title}
 				subtitle={formObject.subtitle}

@@ -51,7 +51,7 @@ const FormInputs = ({
 			<button
 				type='submit'
 				className='form-button'
-				onClick={() => onSubmit()}>
+				onSubmit={() => onSubmit()}>
 				Cargar
 			</button>
 		</form>
