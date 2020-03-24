@@ -11,7 +11,7 @@ function Tarjetas({ image, title, subtitle, description, link }) {
 	);
 	const footer = (
 		<span>
-			<a href={link} target='_blank'>
+			<a href={link} target='_blank' rel='noopener noreferrer'>
 				<Button label='Site' />
 			</a>
 		</span>
@@ -23,7 +23,7 @@ function Tarjetas({ image, title, subtitle, description, link }) {
 			className='card'
 			footer={footer}
 			header={header}>
-			<div className='contenido'>{description}</div>
+			{/* <div className='contenido'>{description}</div> */}
 		</Card>
 	);
 }
