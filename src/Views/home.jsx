@@ -19,20 +19,28 @@ function Home() {
 		const a = cards.map(card => {
 			return (
 				<>
-					<Tarjetas
-						image={card.image}
-						title={card.title}
-						subtitle={card.subtitle}
-						description={card.description}
-						link={card.link}
-					/>
+					<Grid spacing={2}>
+						<Tarjetas
+							image={card.image}
+							title={card.title}
+							subtitle={card.subtitle}
+							description={card.description}
+							link={card.link}
+						/>
+					</Grid>
 				</>
 			);
 		});
 		return a;
 	};
 
-	return <div className='home-container'>{renderTarjetas()}</div>;
+	return (
+		<div className='home-container'>
+			<Grid spacing={1} container>
+				{renderTarjetas()}
+			</Grid>
+		</div>
+	);
 }
 
 export default Home;

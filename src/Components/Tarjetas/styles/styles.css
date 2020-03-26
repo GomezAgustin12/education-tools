@@ -2,8 +2,10 @@
   background-color: #7abfff;
   border-radius: 3rem;
   text-align: center;
-  margin: auto;
-  max-width: 360px;
+  margin: 1rem;
+  min-width: 300px;
+  width: 20vw;
+  height: 40vh;
 }
 
 .p-card-header {
