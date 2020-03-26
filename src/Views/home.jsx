@@ -17,36 +17,22 @@ function Home() {
 
 	const renderTarjetas = () => {
 		const a = cards.map(card => {
-			let i = 0;
-			while (i < 3 && card) {
-				return (
-					<>
-						<Grid item xs={3} spacing={2}>
-							<Tarjetas
-								image={card.image}
-								title={card.title}
-								subtitle={card.subtitle}
-								description={card.description}
-								link={card.link}
-							/>
-						</Grid>
-					</>
-				);
-			}
+			return (
+				<>
+					<Tarjetas
+						image={card.image}
+						title={card.title}
+						subtitle={card.subtitle}
+						description={card.description}
+						link={card.link}
+					/>
+				</>
+			);
 		});
-
-		let result = [];
-
-		for (let i = 0; i < a.length; i++) {
-			for (let j = 0; j < 3; j++) {
-				const aux = <Grid container>{a[i + j * 3]}</Grid>;
-				result.push(aux);
-			}
-		}
-		return result;
+		return a;
 	};
 
-	return <>{renderTarjetas()}</>;
+	return <div className='home-container'>{renderTarjetas()}</div>;
 }
 
 export default Home;
